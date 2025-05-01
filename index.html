@@ -1,0 +1,370 @@
+ <!-- saro by Alex Strickland -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="saro - Smart budgeting solution to help track expenses, create budgets and achieve financial goals">
+    <title>saro - Your New Smart Budgeting Solution</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <header> <!-- This is the header and it includes the logo and hamburger menus-->
+        <div class="container nav-container">
+            <a href="#" class="logo" onclick="showPage('home')" aria-label="Home">saro</a>
+            <div class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu" role="navigation">
+                <li><a href="#" class="nav-link active" onclick="showPage('home')" aria-current="page">Home</a></li>
+                <li><a href="#" class="nav-link" onclick="showPage('about')">About</a></li>
+                <li><a href="#" class="nav-link" onclick="showPage('features')">Features</a></li>
+                <li><a href="#" class="nav-link" onclick="showPage('pricing')">Pricing</a></li>
+                <li><a href="#" class="nav-link" onclick="showPage('register')">Register</a></li>
+                <li><a href="#" class="nav-link" onclick="showPage('admin')">Admin</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main> <!-- Main area. Only active class is shown.-->
+        <div id="home" class="page active" role="main">
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="container">
+                    <h1 id="hero-title">Jumpstart Your New Money Lifestyle</h1>
+                    <p>saro is the groundbreaking smart budgeting solution that helps you visualize and commandeer your spending habits.</p>
+                    <a href="#" class="btn btn-secondary" onclick="showPage('register')" role="button">Start Free Trial</a>
+                </div>
+            </section>
+
+            <section class="info" aria-labelledby="features-title">
+                <div class="container">
+                    <h2 id="features-title" class="section-title">Why Choose saro?</h2>
+                    <div class="features">
+                        <div class="feature" role="article">
+                            <div class="feature-icon" aria-hidden="true">📊</div>
+                            <h3>Groundbreaking Visuals</h3>
+                            <p>Get detailed insights into your spending habits with our powerful analytics and visualization tools.</p>
+                        </div>
+                        <div class="feature" role="article">
+                            <div class="feature-icon" aria-hidden="true">🔔</div>
+                            <h3>Alert System</h3>
+                            <p>Set custom alerts to notify you when you're approaching your spending limits.</p>
+                        </div>
+                        <div class="feature" role="article">
+                            <div class="feature-icon" aria-hidden="true">🔐</div>
+                            <h3>Bank-Level Security</h3>
+                            <p>Your finances are protected with the latest security protocols.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimonials" aria-labelledby="testimonials-title">
+                <div class="container">
+                    <h2 id="testimonials-title" class="section-title">Testimonials</h2>
+                    <div class="testimonial-container">
+                        <figure class="testimonial">
+                            <blockquote>
+                                <p class="testimonial-text">"I love using saro!"</p>
+                            </blockquote>
+                            <figcaption class="testimonial-author">- Sarah J., Finance Professional</figcaption>
+                        </figure>
+                        <figure class="testimonial">
+                            <blockquote>
+                                <p class="testimonial-text">"saro helps me budget! :D"</p>
+                            </blockquote>
+                            <figcaption class="testimonial-author">- Michael T., Small Business Owner</figcaption>
+                        </figure>
+                        <figure class="testimonial">
+                            <blockquote>
+                                <p class="testimonial-text">"As a student, saro is highly recommended!"</p>
+                            </blockquote>
+                            <figcaption class="testimonial-author">- Emma L., University Student</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta" aria-labelledby="cta-title">
+                <div class="container">
+                    <h2 id="cta-title">Ready To Try saro?</h2>
+                    <p>Join thousands of users who have already been using saro.</p>
+                    <a href="#" class="btn btn-secondary" onclick="showPage('register')" role="button">Get Started Today</a>
+                </div>
+            </section>
+        </div>
+
+        <div id="about" class="page" role="main">
+            <section class="about" aria-labelledby="about-title">
+                <div class="container">
+                    <h2 id="about-title" class="section-title">About saro</h2>
+                    <div class="about-content">
+                        <h3>Our Mission</h3>
+                        <p>Our mission at saro is to allow beginner budgeters to control their finances like a professional.</p></br>
+                        <h3>Our Story</h3>
+                        <p>saro was created by Alex Strickland. He struggled to use other money budgeting apps, so he created something that was personal and unique for himself. Once he realized the idea could be suitable for others, he began expanding his operations and creating new features for others to enjoy.</p>
+                        <h3>Our Values</h3>
+                        <ul>
+                            <li><strong>Strength</strong>: We have packed this software full of features.</li>
+                            <li><strong>Innovation</strong>: We are always striving to improve our software.</li>
+                            <li><strong>Creativity</strong>: Our stuff is groundbreaking.</li>
+                            <li><strong>Innovation</strong>: Have we said innovation? Our software is the only one on the market with all our features.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="features" class="page" role="main">
+            <section class="info" aria-labelledby="features-main-title">
+                <div class="container">
+                    <h2 id="features-main-title" class="section-title">Powerful Features</h2>
+                    <div class="features-list">
+                        <article class="feature-item">
+                            <h3>Smart Budget Creation</h3>
+                            <p>saro analyzes your income and spending patterns to suggest personalized budgets that are realistic and achievable. Our AI-powered system adapts to your lifestyle and financial goals.</p>
+                        </article>
+                        <article class="feature-item">
+                            <h3>Expense Tracking</h3>
+                            <p>Automatically categorize and track your expenses across multiple accounts. Connect your bank accounts, credit cards, and other financial services for a complete overview of your spending.</p>
+                        </article>
+                        <article class="feature-item">
+                            <h3>Financial Insights</h3>
+                            <p>Gain valuable insights into your spending habits with detailed analytics and visualizations. Identify areas where you can cut costs and optimize your budget.</p>
+                        </article>
+                        <article class="feature-item">
+                            <h3>Goal Setting</h3>
+                            <p>Set financial goals like saving for a vacation, paying off debt, or building an emergency fund. saro helps you track your progress and stay motivated.</p>
+                        </article>
+                        <article class="feature-item">
+                            <h3>Bill Reminders</h3>
+                            <p>Never miss a payment with automated bill reminders. Schedule recurring expenses and receive notifications before due dates.</p>
+                        </article>
+                    </div>
+                    
+                    <h2 class="section-title">See saro in Action</h2>
+                    <div class="video-container">
+                        <img src="/api/placeholder/800/450" alt="Demonstration of saro budgeting application features">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="pricing" class="page" role="main">
+            <section class="pricing" aria-labelledby="pricing-title">
+                <div class="container">
+                    <h2 id="pricing-title" class="section-title">Choose Your Plan</h2>
+                    <div class="pricing-plans">
+                        <div class="pricing-plan" role="article">
+                            <h3 class="plan-name">Basic</h3>
+                            <div class="plan-price" aria-label="4.99 dollars per month">$4.99<span>/month</span></div>
+                            <ul class="plan-features" aria-label="Basic plan features">
+                                <li>Manual expense tracking</li>
+                                <li>Basic budget creation</li>
+                                <li>Monthly financial reports</li>
+                                <li>Mobile app access</li>
+                                <li>Email support</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary" onclick="showPage('register'); selectPlan('basic')" role="button">Get Started with Basic Plan</a>
+                        </div>
+                        <div class="pricing-plan featured" role="article">
+                            <h3 class="plan-name">Premium</h3>
+                            <div class="plan-price" aria-label="9.99 dollars per month">$9.99<span>/month</span></div>
+                            <ul class="plan-features" aria-label="Premium plan features">
+                                <li>Automatic expense tracking</li>
+                                <li>Advanced budget creation</li>
+                                <li>Weekly financial reports</li>
+                                <li>Goal setting and tracking</li>
+                                <li>Bill reminders</li>
+                                <li>Priority support</li>
+                            </ul>
+                            <a href="#" class="btn btn-secondary" onclick="showPage('register'); selectPlan('premium')" role="button">Get Started with Premium Plan</a>
+                        </div>
+                        <div class="pricing-plan" role="article">
+                            <h3 class="plan-name">Family</h3>
+                            <div class="plan-price" aria-label="14.99 dollars per month">$14.99<span>/month</span></div>
+                            <ul class="plan-features" aria-label="Family plan features">
+                                <li>All Premium features</li>
+                                <li>Up to 5 user accounts</li>
+                                <li>Shared budgets and goals</li>
+                                <li>Family financial dashboard</li>
+                                <li>Personalized financial coaching</li>
+                                <li>24/7 priority support</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary" onclick="showPage('register'); selectPlan('family')" role="button">Get Started with Family Plan</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="register" class="page" role="main">
+            <section class="register" aria-labelledby="register-title">
+                <div class="container">
+                    <h2 id="register-title" class="section-title">Create Your Account</h2>
+                    <div class="form-container">
+                        <form id="registerForm" novalidate>
+                            <div class="form-group">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" id="username" class="form-input" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" class="form-input" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" id="password" class="form-input" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-password" class="form-label">Confirm Password</label>
+                                <input type="password" id="confirm-password" class="form-input" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Selected Plan</label>
+                                <div id="selected-plan" role="status" aria-live="polite">Basic</div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Payment Method</label>
+                                <div class="payment-options" role="radiogroup">
+                                    <div class="payment-option active" role="radio" aria-checked="true" tabindex="0" onclick="selectPayment('credit')" onKeyPress="if(event.key==='Enter') selectPayment('credit')">
+                                        <h4>Credit Card</h4>
+                                    </div>
+                                    <div class="payment-option" role="radio" aria-checked="false" tabindex="0" onclick="selectPayment('paypal')" onKeyPress="if(event.key==='Enter') selectPayment('paypal')">
+                                        <h4>PayPal</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="credit-payment" class="payment-form">
+                                <div class="form-group">
+                                    <label for="card-number" class="form-label">Card Number</label>
+                                    <input type="text" id="card-number" class="form-input" placeholder="1234 5678 9012 3456" aria-required="true" pattern="[0-9\s]{13,19}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-name" class="form-label">Name on Card</label>
+                                    <input type="text" id="card-name" class="form-input" aria-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <div style="display: flex; gap: 10px;">
+                                        <div style="flex: 1;">
+                                            <label for="expiry" class="form-label">Expiry Date</label>
+                                            <input type="text" id="expiry" class="form-input" placeholder="MM/YY" aria-required="true" pattern="(0[1-9]|1[0-2])\/([0-9]{2})">
+                                        </div>
+                                        <div style="flex: 1;">
+                                            <label for="cvv" class="form-label">CVV</label>
+                                            <input type="text" id="cvv" class="form-input" placeholder="123" aria-required="true" pattern="[0-9]{3,4}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="paypal-payment" class="payment-form" style="display: none;">
+                                <div class="form-group">
+                                    <label for="paypal-email" class="form-label">PayPal Email</label>
+                                    <input type="email" id="paypal-email" class="form-input" aria-required="true">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Create Account</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="admin" class="page" role="main">
+            <section class="admin" aria-labelledby="admin-title">
+                <div class="container">
+                    <h2 id="admin-title" class="section-title">Admin Dashboard</h2>
+                    <div class="admin-panel">
+                        <h3 id="user-management">User Management (scroll)</h3>
+                        <div class="table-container" role="region" aria-labelledby="user-management" tabindex="0">
+                            <table>
+                                <caption class="sr-only">User Management Table</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">User ID</th>
+                                        <th scope="col">Username</th>
+                                        <th scope="col">Created</th>
+                                        <th scope="col">Subscription End</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-table">
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <h3 id="stats-title" style="margin-top: 30px;">Subscription Statistics</h3>
+                        <div class="pricing-plans" role="region" aria-labelledby="stats-title">
+                            <div style="background-color: rgba(58, 134, 255, 0.1); padding: 20px; border-radius: 10px; text-align: center;">
+                                <h4>Total Users</h4>
+                                <p style="font-size: 2rem; font-weight: 700; color: var(--primary-color);" aria-label="127 total users">127</p>
+                            </div>
+                            <div style="background-color: rgba(58, 134, 255, 0.1); padding: 20px; border-radius: 10px; text-align: center;">
+                                <h4>Active Subscriptions</h4>
+                                <p style="font-size: 2rem; font-weight: 700; color: var(--primary-color);" aria-label="98 active subscriptions">98</p>
+                            </div>
+                            <div style="background-color: rgba(58, 134, 255, 0.1); padding: 20px; border-radius: 10px; text-align: center;">
+                                <h4>Monthly Revenue</h4>
+                                <p style="font-size: 2rem; font-weight: 700; color: var(--primary-color);" aria-label="1,247 dollars monthly revenue">$1,247</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo" aria-label="saro">saro</div>
+                    <p>The smart budgeting solution for everyone.</p>
+                    <div class="footer-social" role="navigation" aria-label="Social media links">
+                        <a href="#" class="social-icon" aria-label="Facebook">f</a>
+                        <a href="#" class="social-icon" aria-label="Twitter">t</a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+                        <a href="#" class="social-icon" aria-label="Instagram">ig</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 id="quick-links">Quick Links</h3>
+                    <nav aria-labelledby="quick-links">
+                        <ul class="footer-links">
+                            <li><a href="#" onclick="showPage('home')">Home</a></li>
+                            <li><a href="#" onclick="showPage('about')">About</a></li>
+                            <li><a href="#" onclick="showPage('features')">Features</a></li>
+                            <li><a href="#" onclick="showPage('pricing')">Pricing</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <h3 id="support-links">Support</h3>
+                    <nav aria-labelledby="support-links">
+                        <ul class="footer-links">
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <h3 id="contact-info">Contact</h3>
+                    <ul class="footer-links" aria-labelledby="contact-info">
+                        <li>Email: info@saro.com</li>
+                        <li>Phone: +1 (333) 123-4567</li>
+                        <li>Address: 930 Lem Morrison Drive, Auburn, AL</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 saro. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
