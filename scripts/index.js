@@ -1,10 +1,22 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
+let navEnabled = true;
 
 hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
     hamburger.classList.toggle('active');
 });
+
+hamburger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    
+        navMenu.children.forEach(li => {
+            li.setAttribute('tabindex', navEnabled ? '0' : '-1');
+        });
+    }          
+})
 
 function showPage(pageId) {
     const pages = document.querySelectorAll('.page');
@@ -143,7 +155,7 @@ const userData = [
         created: "03/15/2025",
         subscriptionEnd: "03/15/2026",
         subscriptionType: "Premium",
-        subscriptionPrice: 19.99,
+        subscriptionPrice: 9.99,
         isActive: true
     },
     {
@@ -152,7 +164,7 @@ const userData = [
         created: "03/20/2025",
         subscriptionEnd: "03/20/2026",
         subscriptionType: "Basic",
-        subscriptionPrice: 9.99,
+        subscriptionPrice: 4.99,
         isActive: true
     },
     {
@@ -161,7 +173,7 @@ const userData = [
         created: "04/01/2025",
         subscriptionEnd: "07/01/2025",
         subscriptionType: "Premium",
-        subscriptionPrice: 19.99,
+        subscriptionPrice: 9.99,
         isActive: true
     },
     {
@@ -170,7 +182,7 @@ const userData = [
         created: "02/15/2025",
         subscriptionEnd: "02/15/2026",
         subscriptionType: "Family",
-        subscriptionPrice: 29.99,
+        subscriptionPrice: 14.99,
         isActive: true
     },
     {
@@ -179,7 +191,7 @@ const userData = [
         created: "01/10/2025",
         subscriptionEnd: "01/10/2025",
         subscriptionType: "Basic",
-        subscriptionPrice: 9.99,
+        subscriptionPrice: 4.99,
         isActive: false
     },
     {
@@ -188,7 +200,7 @@ const userData = [
         created: "03/05/2025",
         subscriptionEnd: "03/05/2026",
         subscriptionType: "Family",
-        subscriptionPrice: 29.99,
+        subscriptionPrice: 14.99,
         isActive: true
     },
     {
@@ -197,7 +209,7 @@ const userData = [
         created: "04/12/2025",
         subscriptionEnd: "07/12/2025",
         subscriptionType: "Basic",
-        subscriptionPrice: 9.99,
+        subscriptionPrice: 4.99,
         isActive: true
     }
 ];
